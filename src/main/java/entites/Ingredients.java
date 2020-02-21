@@ -10,9 +10,9 @@ import javax.persistence.Table;
 @Table(name="INGREDIENTS")
 public class Ingredients {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(name = "NOM_ING")
+	@Column(name = "NOM")
 	private String nom;
 
 	public Ingredients(String var) {

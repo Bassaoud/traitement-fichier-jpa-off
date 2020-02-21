@@ -15,8 +15,9 @@ import entites.Produits;
 public class IntegrationOpenFoodFacts {
 
 	public static void main(String[] args) {
-
-		ProduitsDAO dao = new ProduitsDAO();
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("open-food-facts-jpa");
+		
+		ProduitsDAO dao = new ProduitsDAO(emf);
 
 		File file = new File("C:/Users/Momo/Desktop/Diginamic/Cours/open-food-facts/open-food-facts.csv");
 		// C:\Users\Momo\Desktop\Diginamic\Cours\open-food-facts
